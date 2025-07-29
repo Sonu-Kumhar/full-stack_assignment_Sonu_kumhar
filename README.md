@@ -16,14 +16,6 @@ NotePilot is a lightweight and responsive **note-taking web app** built using **
 
 ---
 
-## 📸 Screenshot
-
-> *(Optional – Add a screenshot or demo GIF here)*  
-> You can add it like this:  
-> `![NotePilot Screenshot](./screenshot.png)`
-
----
-
 ## 💻 Tech Stack
 
 - **React**
