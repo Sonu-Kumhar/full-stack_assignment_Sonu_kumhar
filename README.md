@@ -1,12 +1,68 @@
-# React + Vite
+# 📝 NotePilot – your co-pilot in productivity
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+[🚀 Live Demo](https://your-live-link.com)
 
-Currently, two official plugins are available:
+NotePilot is a lightweight and responsive **note-taking web app** built using **React**, **Tailwind CSS**, and hosted on **Firebase**. It helps users quickly jot down and manage notes — all stored safely in the browser using **local storage**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🔧 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- ✍️ Create, edit, and delete notes
+- 💾 Notes saved using browser **local storage**
+- 📱 Fully responsive UI (mobile-friendly)
+- ⚡ Super fast performance with clean design
+- 🌐 Live and hosted on Firebase
+
+---
+
+## 📸 Screenshot
+
+> *(Optional – Add a screenshot or demo GIF here)*  
+> You can add it like this:  
+> `![NotePilot Screenshot](./screenshot.png)`
+
+---
+
+## 💻 Tech Stack
+
+- **React**
+- **Tailwind CSS**
+- **UUID** (for unique note IDs)
+- **Firebase Hosting**
+- **Vite** (for fast development)
+
+---
+
+## 📁 Folder Structure
+
+notepilot/
+├── public/
+├── src/
+│ ├── components/
+│ ├── App.jsx
+│ └── main.jsx
+├── .gitignore
+├── package.json
+└── vite.config.js
+
+
+---
+
+## 🚀 Getting Started
+
+Clone the repo and run it locally:
+
+```bash
+git clone https://github.com/Sonu-Kumhar/notepilot.git
+cd notepilot
+npm install
+npm run dev
+
+🙋‍♂️ Author
+Developed by Sonu Kumhar
+
+
+---
+
+Let me know if you'd like to add a **dark mode**, **future plans**, or a **contribution guide** section too.
