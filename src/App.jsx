@@ -5,6 +5,9 @@ import { FaEdit } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
 import confetti from 'canvas-confetti';
 import app from './firebase';
+import completeSound from './assets/sounds/sound1.mp3';
+const completeAudio = new Audio(completeSound);
+
 
 // Optional: if using Firestore, Auth, etc.
 import { getFirestore } from 'firebase/firestore';
@@ -14,7 +17,7 @@ const db = getFirestore(app);
 function App() {
   const [todo, setTodo] = useState("") //input text
   const [todos, setTodos] = useState([]) //This is the array which holds all the todos
-  const [showFinished, setShowFinished] = useState(true)
+  const [showFinished, setShowFinished] = useState(false)
   const [hasLoaded, setHasLoaded] = useState(false);
 
 
@@ -30,7 +33,7 @@ function App() {
   //   localStorage.setItem("todos", JSON.stringify(todos))
   // }
 
-  
+
   useEffect(() => {
     const todoString = localStorage.getItem("todos");
     if (todoString) {
@@ -97,6 +100,10 @@ function App() {
         spread: 70,
         origin: { y: 0.6 },
       });
+
+      // Play sound
+      completeAudio.currentTime = 0; // reset in case it's played before
+      completeAudio.play();
     }
 
     newTodos[index].isCompleted = !newTodos[index].isCompleted;
@@ -151,7 +158,7 @@ function App() {
           {todos.map((item) => {
             return (showFinished || !item.isCompleted) && <div key={item.id} className="todo flex justify-between my-3">
               <div className='flex gap-3'>
-                <input name={item.id} onChange={handleCheckbox} type="checkbox" checked={item.isCompleted} id="" className=' accent-blue-700 align-middle'/>
+                <input name={item.id} onChange={handleCheckbox} type="checkbox" checked={item.isCompleted} id="" className=' accent-blue-700 align-middle' />
                 <div className={item.isCompleted ? "line-through" : ""}>{item.todo}</div>
               </div>
               <div className="buttons flex h-full">
