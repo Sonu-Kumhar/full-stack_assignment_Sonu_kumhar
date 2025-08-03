@@ -1,0 +1,78 @@
+@layer utilities {
+  .glow-dark-border {
+    position: relative;
+    z-index: 1;
+    border-radius: 0.75rem;
+    padding: 4px; 
+    background-color: #0a0a1f;
+  }
+
+  .glow-dark-border::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    background: linear-gradient(
+      90deg,
+      rgba(7, 0, 16, 1),
+      rgba(19, 7, 48, 1),
+      rgba(7, 0, 16, 1)
+    );
+    background-size: 200% 200%;
+    z-index: -1;
+    animation: subtle-glow 6s ease infinite;
+    pointer-events: none;
+  }
+
+  @keyframes subtle-glow {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+}
+
+
+
+@layer utilities {
+  .hover-glow {
+    @apply transition duration-300;
+    transition-timing-function: ease-in-out;
+    will-change: transform;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 15px rgba(255, 0, 242, 0.2), 0 0 25px rgba(255, 0, 234, 0.2);
+    transform: scale(1.01);
+  }
+}
+
+@layer utilities {
+  .scrollbar-purple {
+    scrollbar-color: rgba(203, 143, 214, 0.6) rgba(40, 16, 64, 0.8); 
+  }
+
+  .scrollbar-purple::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .scrollbar-purple::-webkit-scrollbar-track {
+    background: rgba(40, 16, 64, 0.8); 
+  }
+
+  .scrollbar-purple::-webkit-scrollbar-thumb {
+    background-color: rgba(203, 143, 214, 0.6); 
+    border-radius: 6px;
+    border: 1px solid rgba(203, 143, 214, 0.8);
+  }
+
+  .scrollbar-purple::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(203, 143, 214, 0.8);
+  }
+}
